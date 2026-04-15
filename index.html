@@ -6,13 +6,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Word Solitaire MindStack – Educational Word Puzzle Game</title>
+<title>Word Solitaire MindStack – Word Puzzle Card Game for iPhone</title>
 
-<meta name="description" content="Word Solitaire MindStack is a modern educational word puzzle game that trains your brain with fun solitaire mechanics.">
+<meta name="description" content="Spell words from a hand of letter cards to clear the board. A relaxing word puzzle game that trains your vocabulary, logic, and memory. Free on the App Store.">
 
-<meta name="keywords" content="word puzzle game, solitaire word game, brain training game, vocabulary game">
+<meta name="keywords" content="word puzzle game, solitaire card game, brain training, vocabulary game, iOS word game, iPhone puzzle game">
 
-<link rel="canonical" href="https://yourusername.github.io/wordsolitaire-site/">
+<link rel="canonical" href="https://wordsolitaire.app/">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wordsolitaire.app/">
+<meta property="og:title" content="Word Solitaire MindStack – Word Puzzle Card Game for iPhone">
+<meta property="og:description" content="Spell words from a hand of letter cards to clear the board. Free on the App Store.">
+<meta property="og:image" content="https://wordsolitaire.app/og-image.png"><!-- TODO: add real OG image -->
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Word Solitaire MindStack">
+<meta name="twitter:description" content="Spell words from letter cards to clear the board. Free on the App Store.">
+<meta name="twitter:image" content="https://wordsolitaire.app/og-image.png"><!-- TODO: add real OG image -->
 
 <style>
 
@@ -45,65 +61,178 @@ padding:20px 0;
 .logo{
 font-weight:700;
 font-size:22px;
+text-decoration:none;
+color:#222;
 }
 
 nav a{
 margin-left:20px;
 text-decoration:none;
-color:#333;
+color:#555;
 font-size:14px;
+transition:color 0.2s;
 }
 
+nav a:hover{
+color:#000;
+}
+
+/* Hero */
 .hero{
 text-align:center;
-padding:80px 20px;
+padding:80px 20px 60px;
 }
 
 .hero h1{
-font-size:42px;
-margin-bottom:20px;
+font-size:48px;
+line-height:1.15;
+margin-bottom:18px;
+letter-spacing:-0.5px;
 }
 
-.hero p{
-font-size:18px;
+.hero .tagline{
+font-size:19px;
 color:#555;
-margin-bottom:30px;
+max-width:520px;
+margin:0 auto 10px;
 }
 
-.download{
-display:inline-block;
-padding:14px 26px;
+.hero .meta{
+font-size:14px;
+color:#999;
+margin-bottom:36px;
+}
+
+/* App Store button */
+.appstore-btn{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:13px 22px;
 background:#000;
 color:#fff;
-border-radius:8px;
+border-radius:12px;
 text-decoration:none;
-font-size:15px;
+transition:background 0.2s, transform 0.15s;
 }
 
+.appstore-btn:hover{
+background:#1a1a1a;
+transform:translateY(-2px);
+}
+
+.appstore-btn .apple-icon{
+font-size:24px;
+line-height:1;
+}
+
+.appstore-btn .btn-text{
+display:flex;
+flex-direction:column;
+text-align:left;
+}
+
+.appstore-btn .btn-label{
+font-size:10px;
+opacity:0.75;
+letter-spacing:0.4px;
+text-transform:uppercase;
+}
+
+.appstore-btn .btn-store{
+font-size:17px;
+font-weight:600;
+letter-spacing:-0.2px;
+}
+
+/* How to Play */
+.how-to-play{
+margin-top:90px;
+text-align:center;
+}
+
+.how-to-play h2{
+font-size:32px;
+margin-bottom:12px;
+}
+
+.how-to-play .subtitle{
+color:#666;
+font-size:16px;
+margin-bottom:48px;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:24px;
+}
+
+.step{
+background:#fff;
+border-radius:12px;
+padding:32px 24px;
+box-shadow:0 4px 14px rgba(0,0,0,0.06);
+}
+
+.step-number{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:38px;
+height:38px;
+background:#FFF5EB;
+border:2px solid #222;
+border-radius:50%;
+font-weight:700;
+font-size:16px;
+margin-bottom:18px;
+}
+
+.step h3{
+font-size:17px;
+margin-bottom:8px;
+}
+
+.step p{
+font-size:14px;
+color:#666;
+line-height:1.6;
+}
+
+/* Features */
 .features{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:30px;
-margin-top:60px;
+gap:24px;
+margin-top:90px;
 }
 
 .feature{
-background:#ffffff;
-padding:30px;
-border-radius:10px;
+background:#fff;
+padding:28px;
+border-radius:12px;
 box-shadow:0 4px 14px rgba(0,0,0,0.06);
+transition:transform 0.2s, box-shadow 0.2s;
+}
+
+.feature:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 28px rgba(0,0,0,0.1);
 }
 
 .feature h3{
 margin-bottom:10px;
-font-size:18px;
+font-size:17px;
 }
 
 .feature p{
 font-size:14px;
 color:#666;
+line-height:1.6;
 }
 
+/* About section */
 .section{
 margin-top:100px;
 text-align:center;
@@ -111,17 +240,39 @@ text-align:center;
 
 .section h2{
 font-size:30px;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 .section p{
-max-width:600px;
-margin:auto;
+max-width:620px;
+margin:0 auto;
 color:#666;
+font-size:16px;
+}
+
+/* Bottom CTA */
+.cta-section{
+margin-top:100px;
+background:#fff;
+border-radius:16px;
+padding:64px 40px;
+text-align:center;
+box-shadow:0 4px 20px rgba(0,0,0,0.06);
+}
+
+.cta-section h2{
+font-size:30px;
+margin-bottom:12px;
+}
+
+.cta-section p{
+color:#666;
+font-size:16px;
+margin-bottom:28px;
 }
 
 footer{
-margin-top:120px;
+margin-top:80px;
 padding:40px 0;
 border-top:1px solid #eee;
 text-align:center;
@@ -133,6 +284,17 @@ footer a{
 margin:0 10px;
 text-decoration:none;
 color:#555;
+transition:color 0.2s;
+}
+
+footer a:hover{
+color:#222;
+}
+
+@media(max-width:600px){
+.hero h1{font-size:34px;}
+.steps,.features{grid-template-columns:1fr;}
+.cta-section{padding:44px 24px;}
 }
 
 </style>
@@ -145,7 +307,7 @@ color:#555;
 
 <header>
 
-<div class="logo">Word Solitaire</div>
+<a class="logo" href="/">Word Solitaire</a>
 
 <nav>
 <a href="privacy.html">Privacy</a>
@@ -155,15 +317,54 @@ color:#555;
 
 </header>
 
+
 <section class="hero">
 
-<h1>Train Your Brain with Word Solitaire</h1>
+<h1>Spell Words.<br>Clear the Board.</h1>
 
-<p>
-A relaxing yet challenging word puzzle game designed to improve vocabulary, logic, and memory.
+<p class="tagline">
+A card-based word puzzle game where every hand is a new challenge.
 </p>
 
-<a class="download" href="#">Download on App Store</a>
+<p class="meta">Free &nbsp;·&nbsp; iPhone &nbsp;·&nbsp; No account needed</p>
+
+<a class="appstore-btn" href="#"><!-- TODO: replace # with App Store URL -->
+<span class="apple-icon"></span>
+<span class="btn-text">
+<span class="btn-label">Download on the</span>
+<span class="btn-store">App Store</span>
+</span>
+</a>
+
+</section>
+
+
+<section class="how-to-play">
+
+<h2>How to Play</h2>
+<p class="subtitle">Simple to learn, satisfying to master.</p>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">1</div>
+<h3>Draw Your Cards</h3>
+<p>A fresh hand of letter cards is dealt each round. No two games play out the same way.</p>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<h3>Spell a Word</h3>
+<p>Arrange cards from your hand to form valid English words and play them onto the board.</p>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<h3>Clear the Board</h3>
+<p>Use all your cards wisely to clear the board and progress to the next level.</p>
+</div>
+
+</div>
 
 </section>
 
@@ -171,30 +372,30 @@ A relaxing yet challenging word puzzle game designed to improve vocabulary, logi
 <section class="features">
 
 <div class="feature">
-<h3>🧠 Brain Training</h3>
+<h3>🧠 Grows Your Vocabulary</h3>
 <p>
-Improve vocabulary and mental agility through engaging word solitaire puzzles.
+Every puzzle pushes you to recall and form real words under pressure — a natural, enjoyable way to expand your vocabulary over time.
 </p>
 </div>
 
 <div class="feature">
-<h3>🎮 Casual Gameplay</h3>
+<h3>🎯 Daily Rewards & Streaks</h3>
 <p>
-Play quick sessions anytime with relaxing yet rewarding gameplay mechanics.
+Log in each day for bonus coins and streak rewards. Daily reminders keep the habit going without being intrusive.
 </p>
 </div>
 
 <div class="feature">
-<h3>📚 Educational</h3>
+<h3>🪙 Coins & Strategy</h3>
 <p>
-Learn new words and strengthen language skills while having fun.
+Earn coins through gameplay or rewarded ads. Spend them on extra moves when you're just one word away from clearing the board.
 </p>
 </div>
 
 <div class="feature">
-<h3>⚡ Smooth Experience</h3>
+<h3>📶 Fully Offline</h3>
 <p>
-Optimized for modern iPhones with fast performance and elegant design.
+All progress is saved locally on your device. No Wi-Fi needed — play on a plane, commute, or anywhere without interruption.
 </p>
 </div>
 
@@ -203,11 +404,28 @@ Optimized for modern iPhones with fast performance and elegant design.
 
 <section class="section">
 
-<h2>Designed for Focus & Learning</h2>
+<h2>Strategy Meets Language</h2>
 
 <p>
-Word Solitaire MindStack combines the strategy of solitaire with word puzzles to create a unique educational gaming experience. Perfect for players who enjoy challenging their mind while relaxing.
+Word Solitaire MindStack blends the methodical thinking of card solitaire with the creativity of word puzzles. Each hand challenges you to think ahead — which letters to play now, which to hold back — making every board you clear feel genuinely earned.
 </p>
+
+</section>
+
+
+<section class="cta-section">
+
+<h2>Ready to Play?</h2>
+
+<p>Free to download. No account required. Available now on iPhone.</p>
+
+<a class="appstore-btn" href="#"><!-- TODO: replace # with App Store URL -->
+<span class="apple-icon"></span>
+<span class="btn-text">
+<span class="btn-label">Download on the</span>
+<span class="btn-store">App Store</span>
+</span>
+</a>
 
 </section>
 
